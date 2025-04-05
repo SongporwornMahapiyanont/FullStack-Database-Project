@@ -274,6 +274,7 @@ app.post('/delete',async(req,res)=>{
         return res.status(500)
     }
 })
-app.listen(2000,'localhost',async(req,res)=>{
+app.listen(port, '0.0.0.0', async (req, res) => {
     console.log(`Example app listening on port ${port}`)
 })
+
