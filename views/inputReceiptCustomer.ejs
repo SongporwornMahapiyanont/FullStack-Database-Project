@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Members</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>Create Customer</h1>
+
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+
+    <form action="/receiptcustomer" method="post">
+        <label for="Email">Email:</label><br>
+        <input type="email" id="Email" name="Email"><br><br>
+
+        <input type="submit" value="Click to submit">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Members</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>Create Customer</h1>
+
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+
+    <form action="/register" method="post">
+        <label for="Address" style="cursor: crosshair;">Address:</label><br>
+        <input type="text" id="Address" name="Address"><br><br>
+
+        <label for="Name">Name:</label><br>
+        <input type="text" id="Name" name="Name"><br><br>
+
+        <label for="Email">Email:</label><br>
+        <input type="email" id="Email" name="Email"><br><br>
+
+        <label for="Total_Spending">Total Spending:</label><br>
+        <input type="number" id="Total_Spending" name="Total_Spending"><br><br>
+
+
+        
+        <input type="submit" value="Click to submit">
+    </form>
+
+</body>
+</html>

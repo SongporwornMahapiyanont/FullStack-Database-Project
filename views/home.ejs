@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Members on Database</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>All Members on Database</h1>
+    
+    <!-- <a href="/create">Register</a>
+    <a href="/">Check All Customers</a>
+    <a href="/receipt">Check All Receipt</a> -->
+
+    <div>
+        <% home.forEach(Customers => { %>
+            <tr>
+                <td>CustomerID : <%= Customers.CustomerID %></td><br>
+              <td>Name : <%= Customers.Name %></td><br>
+              <td>Address : <%= Customers.Address %></td><br>
+              <td>Email : <%= Customers.Email %></td>
+            </tr>
+            <hr>
+          <% }); %>
+    </div>
+
+</body>
+</html>

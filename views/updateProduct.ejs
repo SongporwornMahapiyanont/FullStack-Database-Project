@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Members</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>Update Products</h1>
+    <% if (message) { %>
+        <p style="color: green;"><%= message %></p>
+    <% } %>
+    
+    <form action="/updateProduct" method="post">
+        <label for="nameProduct" style="cursor: crosshair;">nameProduct:</label><br>
+        <input type="text" id="nameProduct" name="nameProduct"><br><br>
+
+        <label for="Quantity">Quantity:</label><br>
+        <input type="number" id="Quantity" name="Quantity"><br><br>
+
+        <input type="submit" value="Click to submit">
+    </form>
+
+</body>
+</html>

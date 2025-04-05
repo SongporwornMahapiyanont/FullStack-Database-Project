@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receiptCustomer</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>receiptCustomer</h1>
+    <hr>
+
+    <form action="/receiptcustomer" method="POST">
+        <label for="email">Email ลูกค้า:</label>
+        <input type="email" name="email" required>  
+        <button type="submit">ค้นหา</button>
+    </form>
+    
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+    
+    <% if (receiptCustomer && receiptCustomer.length > 0) { %>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ชื่อ</th>
+                    <th>Email</th>
+                    <th>สินค้า</th>
+                    <th>ราคา</th>
+                    <th>ราคารวมภาษี</th>
+                    <th>วันที่สั่งซื้อ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% receiptCustomer.forEach(item => { %>
+                    <tr>
+                        <td><%= item.Name %></td>
+                        <td><%= item.Email %></td>
+                        <td><%= item.nameProduct %></td>
+                        <td><%= item.price %></td>
+                        <td><%= item.TotalSales %></td>
+                        <td><%= item.Date %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } %>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>delete Members</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>delete Customer</h1>
+
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+
+    <form action="/delete" method="post">
+        <label for="Email" style="cursor: crosshair;">Input your Email:</label><br>
+        <input type="text" id="Email" name="Email"><br><br>
+        <input type="submit" value="Click to submit">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Members</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>Add Product</h1>
+
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+
+    <form action="/addProduct" method="post">
+        <label for="nameProduct" style="cursor: crosshair;">nameProduct:</label><br>
+        <input type="text" id="nameProduct" name="nameProduct"><br><br>
+
+        <label for="spec">spec:</label><br>
+        <input type="text" id="spec" name="spec"><br><br>
+
+        <label for="Quantity">quantity:</label><br>
+        <input type="number" id="Quantity" name="Quantity"><br><br>
+
+        <label for="price">price:</label><br>
+        <input type="number" id="price" name="price"><br><br>
+
+        <label for="TotalSales">Total Spending:</label><br>
+        <input type="number" id="TotalSales" name="TotalSales"><br><br>
+
+        <input type="submit" value="Click to submit">
+    </form>
+
+</body>
+</html>

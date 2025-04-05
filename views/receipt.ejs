@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <h1>receipt</h1>
+    <hr>
+    <div>
+        <% receipt.forEach(Customers => { %>
+            <tr>
+                <td>CustomerID : <%= Customers.CustomerID %></td><br>
+              <td>Name : <%= Customers.Name %></td><br>
+              <td>Address : <%= Customers.Address %></td><br>
+              <td>Email : <%= Customers.Email %></td><br>
+              <td>Total_Spending : <%= Customers.Total_Spending %></td><br>
+              <td>orderID : <%= Customers.orderID %></td><br>
+              <td>productID : <%= Customers.productID %></td><br>
+              <td>PaymentStatus : <%= Customers.PaymentStatus %></td><br>
+              <td>nameProduct : <%= Customers.nameProduct %></td><br>
+              <td>Spec : <%= Customers.spec %></td><br>
+              <td>price : <%= Customers.price %></td><br>
+              <td>TotalSales : <%= Customers.TotalSales %></td><br>
+            </tr>
+            <hr>
+          <% }); %>
+    </div>
+</body>
+</html>
