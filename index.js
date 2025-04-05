@@ -3,6 +3,7 @@ const express = require('express')
 const mySql = require('mysql2') //mysql2
 const app = express()
 const path = require('path')
+const port = process.env.PORT || 4000;
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.set('view engine','ejs')
@@ -274,5 +275,5 @@ app.post('/delete',async(req,res)=>{
     }
 })
 app.listen(2000,'localhost',async(req,res)=>{
-    console.log('Started On Local 2000')
+    console.log(`Example app listening on port ${port}`)
 })
